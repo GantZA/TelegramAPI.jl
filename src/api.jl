@@ -5,7 +5,7 @@ function get_me(token)
     return JSON.parse(String(HTTP.get(API_URL * token *"/getMe").body))
 end
 
-function get_updates(token, offset)
+function get_updates(token, offset=0)
     return JSON.parse(String(HTTP.get(API_URL * token *"/getUpdates?offset=" * string(offset)).body))
 end
 
